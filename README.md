@@ -26,13 +26,35 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
 
+    .map - automatically returns a new array of converted data, you would use this if you needed to see an array of specific keys taken from a large array of objects
+
+    .reduce - returns a single value by taking in 2 parameters: the running total (accumulator) and the current element being processed in the array, it also needs an initial value so it knows where to start the equations: for adding usually 0 is used, and if multiplying usually 1 is used. This could be used for pretty much anything but is most commonly used for sums and products.
+
+    .filter - returns a new array after filtering through an array of data and deciding if that data is true or false, if it's considered true it is included in the new array, you could use this if you wanted to see an array of specific dates from a larger array of objects
+
 2. Explain the difference between a callback and a higher order function.
+
+    A higher order function is a function that takes in another function as an argument.
+
+    A callback function is the function that gets passed as an argument into a higher order function
 
 3. Explain what a closure is.
 
+    A closure happens when an nested function reaches into its outer function to grab a variable that is defined in the outer function
+
 4. Describe the four principles of the 'this' keyword.
 
+    Window Binding: an error that occurs when 'this' isn't given context so the browser returns the window or undefined if in strict mode
+
+    Implicit Binding: this occurs in 80% of use cases and applies to objects with methods, when we invoke the function it looks to the left of the dot and that is what 'this' refers to
+
+    Explicit Binding: when we explicitly state what 'this' refers to by using .call/.bind/.apply
+
+    New Binding: applies when a function is invoked as a constructor function by using the 'new' keyword to create a new object and 'this' refers to the new object that was created
+
 5. Why do we need super() in an extended class?
+
+    super(), when used together with extends, allows the child to inherit all the attributes of the parent class by doing what .call and Object.create do
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
